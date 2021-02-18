@@ -121,6 +121,7 @@ int main(int argc, char *argv[])
     if (socket_desc == -1)
     {
         printf("Could not create socket");
+//it prints could not create socket//
         return 1;
     }
     printf("Socket created\n");
@@ -132,12 +133,14 @@ int main(int argc, char *argv[])
         return 1;
     }
     printf("bind done\n");
+//output bind done//
     //Listen
     listen(socket_desc, 3);
     //Accept and incoming connection
     while(1)
     {
 	        printf("Waiting for incoming connections...\n");
+//it reads waiting for incoming connections//
 	        clientLen = sizeof(struct sockaddr_in);
 	        //accept connection from an incoming client
 	        sock = accept(socket_desc,(struct sockaddr *)&client,(socklen_t*)&clientLen);
@@ -147,7 +150,8 @@ int main(int argc, char *argv[])
 	            return 1;
 	        }
 	        printf("Connection accepted\n");
-	        
+
+//connection accepted//
 	        //Receive a reply from the client
 	        struct data patient_info;
 	       
