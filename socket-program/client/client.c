@@ -58,6 +58,7 @@ int check_input(char str[])
 	{
 		return 1;
 	}
+//it simply returns the number 1//
 	else if (strcmp("Addpatient",command) == 0)
 	{
 		return 2;
@@ -117,6 +118,7 @@ int send_and_receive_data(struct PatientData c, int rcv)
         return 1;
     }
     //printf("Socket is created\n");
+//it prints the socket//
 
     if (SocketConnect(hSocket) < 0)
     {
